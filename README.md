@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+gekikaraya/
+├── components/               # UIコンポーネント
+│   ├── Header.tsx            # ヘッダー（ナビゲーション含む）
+│   ├── Footer.tsx            # フッター
+│   ├── Layout.tsx            # 全体レイアウト用コンポーネント
+│   ├── HeroBanner.tsx        # ホーム用ビジュアルバナー
+│   └── MenuCard.tsx          # メニュー表示用カード
+│
+├── pages/                    # Next.js ページルーティング
+│   ├── index.tsx             # 1. ホームページ
+│   ├── about.tsx             # 2. こだわり
+│   ├── news/                 
+│   │   ├── index.tsx         # 3. お知らせ一覧
+│   │   └── [id].tsx          # 4. お知らせ詳細
+│   │
+│   ├── menu/                 # 5-10. メニューページ
+│   │   ├── index.tsx         # メニュートップページ
+│   │   ├── shoyu.tsx         # 醤油ラーメン
+│   │   ├── miso.tsx          # 味噌ラーメン
+│   │   ├── shio.tsx          # 塩ラーメン
+│   │   ├── tonkotsu.tsx      # とんこつラーメン
+│   │   └── gekikara.tsx      # 激辛ラーメン🔥（看板メニュー）
+│   │
+│   ├── toppings.tsx          # 11. トッピング一覧
+│   ├── sides.tsx             # 12. サイドメニュー（餃子・チャーハンなど）
+│   ├── drinks.tsx            # 13. ドリンクメニュー
+│
+│   ├── recruit/              # 14-16. 採用情報
+│   │   ├── index.tsx         # 採用トップページ
+│   │   ├── details.tsx       # アルバイト募集詳細（時給¥1,090）
+│   │   └── apply.tsx         # 応募フォーム
+│
+│   ├── challenge.tsx         # 17. 辛さチャレンジ🔥
+│   ├── point-card.tsx        # 18. ポイントカード案内
+│   ├── payment.tsx           # 19. 支払い方法（PayPay & 現金のみ）
+│   ├── faq.tsx               # 20. よくある質問（Q&A）
+│   ├── contact.tsx           # 21. お問い合わせフォーム
+│   ├── access.tsx            # 22. 店舗情報・アクセス
+│   ├── privacy.tsx           # 23. プライバシーポリシー
+│   ├── terms.tsx             # 24. 利用規約
+│   └── sitemap.tsx           # 25. サイトマップ
+│
+├── public/                   # 静的ファイル（写真除外）
+│   └── favicon.ico           # ファビコン
+│
+├── styles/                   # スタイル関連
+│   ├── globals.css           # グローバルCSS（Tailwind適用済み）
+│   └── variables.scss        # SCSS用のカラーパレット設定
+│
+├── tailwind.config.js        # TailwindCSS 設定
+├── tsconfig.json             # TypeScript 設定
+├── package.json              # パッケージ設定
+└── README.md                 # プロジェクト概要
+"# -" 
